@@ -1,4 +1,4 @@
-package practice.hackerrank;
+package internship.amgen;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -111,9 +112,12 @@ public class PrimePawnJump {
     }
 
     public static void main(String[] args) {
-        TestCase testCase1 = new TestCase(3);
-
         Solution solution = new Solution();
+
+        List<Integer> cells = Arrays.asList(0, -10, 100, -20);
+        System.out.println(solution.maxGameScore(cells));
+
+        TestCase testCase1 = new TestCase(1);
         if (testCase1.getOutput() == solution.maxGameScore(testCase1.getInput())) {
             System.out.printf("Test Case: %s Passed%n", testCase1.testCaseNumber);
         } else {
